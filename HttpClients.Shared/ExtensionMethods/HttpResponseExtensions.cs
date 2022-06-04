@@ -5,10 +5,19 @@ using Serilog;
 
 namespace GoSolve.HttpClients.Shared.ExtensionMethods;
 
+/// <summary>
+/// Extension methods for the HttpResponseMessage class.
+/// </summary>
 public static class HttpResponseExtensions
 {
     private static readonly ILogger _logger = Log.ForContext(typeof(HttpResponseExtensions));
 
+    /// <summary>
+    /// Validate whether the response is successful.
+    /// </summary>
+    /// <param name="response"></param>
+    /// <returns></returns>
+    /// <exception cref="Exception">Thrown when the response is unsuccessful.</exception>
     public static async Task ValidateSuccess(this HttpResponseMessage response)
     {
         if (response.IsSuccessStatusCode) return;
@@ -37,6 +46,12 @@ public static class HttpResponseExtensions
         }
     }
 
+    /// <summary>
+    /// Deserialize the response content to a contract class.
+    /// </summary>
+    /// <typeparam name="T">The type of the contract the content should be deserialized to.</typeparam>
+    /// <param name="response"></param>
+    /// <returns></returns>
     public static async Task<T> AsContract<T>(this HttpResponseMessage response)
     {
         var content = await response.Content.ReadAsStringAsync();
