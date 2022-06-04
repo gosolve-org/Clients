@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <Description>Package containing shared logic for all HttpClients.</Description>
+    <RootNamespace>GoSolve.HttpClients.Shared</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="ExtensionMethods\" />
+    <None Remove="GoSolve.Tools.Common" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ExtensionMethods\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="GoSolve.Tools.Common" Version="0.0.2">
+      <IncludeAssets>All</IncludeAssets>
+      <PrivateAssets>None</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+</Project>
