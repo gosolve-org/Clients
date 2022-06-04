@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <PackageId>GoSolve.HttpClients.Dummy.Review</PackageId>
+    <Version>0.0.1</Version>
+    <Company>goSolve</Company>
+    <Authors>goSolve IT</Authors>
+    <PackageTags>client;httpclient;dummy</PackageTags>
+    <Description>Package containing the HttpClient for the dummy Review api.</Description>
+    <Copyright>Copyright © goSolve 2022</Copyright>
+    <RepositoryUrl>https://github.com/gosolve-org/Clients</RepositoryUrl>
+    <PackageLicenseExpression>AGPL-3.0-only</PackageLicenseExpression>
+    <RootNamespace>GoSolve.HttpClients.Dummy.Review</RootNamespace>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageReleaseNotes>
+        v0.0.1: Added basic dummy ReviewHttpClient
+    </PackageReleaseNotes>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Contracts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Contracts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HttpClients.Shared\HttpClients.Shared.csproj" />
+  </ItemGroup>
+</Project>
