@@ -4,7 +4,7 @@
     <Nullable>disable</Nullable>
     <ImplicitUsings>true</ImplicitUsings>
     <PackageId>GoSolve.HttpClients.Dummy.Book</PackageId>
-    <Version>0.0.1</Version>
+    <Version>0.0.2</Version>
     <Company>goSolve</Company>
     <Authors>goSolve IT</Authors>
     <PackageTags>client;httpclient;dummy</PackageTags>
@@ -16,15 +16,16 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageReleaseNotes>
         v0.0.1: Added basic dummy BookHttpClient
+        v0.0.2: Fix GoSolve.HttpClients.Shared project reference
     </PackageReleaseNotes>
   </PropertyGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HttpClients.Shared\HttpClients.Shared.csproj" />
-  </ItemGroup>
   <ItemGroup>
     <None Remove="Contracts\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Contracts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HttpClients.Shared\HttpClients.Shared.csproj" />
   </ItemGroup>
 </Project>

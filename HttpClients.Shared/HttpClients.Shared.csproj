@@ -3,9 +3,20 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>disable</Nullable>
     <ImplicitUsings>true</ImplicitUsings>
+    <PackageId>GoSolve.HttpClients.Shared</PackageId>
+    <Version>0.0.1</Version>
+    <Company>goSolve</Company>
+    <Authors>goSolve IT</Authors>
+    <PackageTags>client;httpclient;dummy</PackageTags>
+    <Copyright>Copyright © goSolve 2022</Copyright>
+    <RepositoryUrl>https://github.com/gosolve-org/Clients</RepositoryUrl>
+    <PackageLicenseExpression>AGPL-3.0-only</PackageLicenseExpression>
     <Description>Package containing shared logic for all HttpClients.</Description>
     <RootNamespace>GoSolve.HttpClients.Shared</RootNamespace>
-    <IsPackable>false</IsPackable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageReleaseNotes>
+        v0.0.1: Added generic http extension methods
+    </PackageReleaseNotes>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="ExtensionMethods\" />
