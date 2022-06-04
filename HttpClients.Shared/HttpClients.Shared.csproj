@@ -5,6 +5,7 @@
     <ImplicitUsings>true</ImplicitUsings>
     <Description>Package containing shared logic for all HttpClients.</Description>
     <RootNamespace>GoSolve.HttpClients.Shared</RootNamespace>
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="ExtensionMethods\" />
