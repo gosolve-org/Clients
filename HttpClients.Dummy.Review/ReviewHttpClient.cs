@@ -18,7 +18,7 @@ public class ReviewHttpClient : IReviewHttpClient
         _httpClient = httpClient;
     }
 
-    public async Task<ReviewResponse> AddReview(ReviewRequest review)
+    public async Task<ReviewResponse> Add(ReviewAddRequest review)
     {
         var response = await _httpClient.PostAsync($"{VersionUri}/{ReviewUri}", review.AsJson());
         await response.ValidateSuccess();
@@ -26,7 +26,15 @@ public class ReviewHttpClient : IReviewHttpClient
         return await response.AsContract<ReviewResponse>();
     }
 
-    public async Task<ReviewResponse> GetReviewById(int reviewId)
+    public async Task<ReviewResponse> Update(long id, ReviewUpdateRequest review)
+    {
+        var response = await _httpClient.PutAsync($"{VersionUri}/{ReviewUri}/{id}", review.AsJson());
+        await response.ValidateSuccess();
+
+        return await response.AsContract<ReviewResponse>();
+    }
+
+    public async Task<ReviewResponse> GetById(long reviewId)
     {
         var response = await _httpClient.GetAsync($"{VersionUri}/{ReviewUri}/{reviewId}");
         await response.ValidateSuccess();
@@ -34,7 +42,7 @@ public class ReviewHttpClient : IReviewHttpClient
         return await response.AsContract<ReviewResponse>();
     }
 
-    public async Task<IEnumerable<ReviewResponse>> GetReviews(string author)
+    public async Task<IEnumerable<ReviewResponse>> GetByFilters(string author)
     {
         var response = await _httpClient.GetAsync($"{VersionUri}/{ReviewUri}"
             .AddQuery("author", author)
@@ -44,20 +52,12 @@ public class ReviewHttpClient : IReviewHttpClient
         return await response.AsContract<IEnumerable<ReviewResponse>>();
     }
 
-    public async Task<IEnumerable<ReviewResponse>> GetReviewsForBook(int bookId)
+    public async Task<IEnumerable<ReviewResponse>> GetForBook(long bookId)
     {
         var response = await _httpClient.GetAsync($"{VersionUri}/{BookUri}/{bookId.UriEncode()}/{ReviewUri}");
         await response.ValidateSuccess();
 
         return await response.AsContract<List<ReviewResponse>>();
-    }
-
-    public async Task<IEnumerable<ReviewResponse>> GetReviewsForAuthor(string author)
-    {
-        var response = await _httpClient.GetAsync($"{VersionUri}/{ReviewUri}/authors/{author.UriEncode()}");
-        await response.ValidateSuccess();
-
-        return await response.AsContract<IEnumerable<ReviewResponse>>();
     }
 }
 #pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
