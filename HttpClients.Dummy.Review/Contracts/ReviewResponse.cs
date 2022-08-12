@@ -1,9 +1,11 @@
-﻿namespace GoSolve.HttpClients.Dummy.Review.Contracts;
+﻿using GoSolve.HttpClients.Shared.Models;
+
+namespace GoSolve.HttpClients.Dummy.Review.Contracts;
 
 /// <summary>
 /// Response DTO for Review.
 /// </summary>
-public class ReviewResponse
+public class ReviewResponse : TimestampedResponse
 {
     /// <summary>
     /// Id of the review.
@@ -29,14 +31,4 @@ public class ReviewResponse
     /// Comment on the book.
     /// </summary>
     public string Comment { get; set; }
-
-    /// <summary>
-    /// Date of creation.
-    /// </summary>
-    public DateTime CreatedAt { get; set; }
-
-    /// <summary>
-    /// Date of last update.
-    /// </summary>
-    public DateTime UpdatedAt { get; set; }
 }
