@@ -3,14 +3,19 @@
 namespace GoSolve.HttpClients.Dummy.Review.Contracts;
 
 /// <summary>
-/// Request DTO for Review.
+/// Request DTO for updating a Review.
 /// </summary>
-public class ReviewRequest
+public class ReviewUpdateRequest
 {
+    /// <summary>
+    /// Id of the review to update.
+    /// </summary>
+    public long Id { get; set; }
+
     /// <summary>
     /// Id of the book the review is for.
     /// </summary>
-    public int BookId { get; set; }
+    public long BookId { get; set; }
 
     /// <summary>
     /// Author of the review.
