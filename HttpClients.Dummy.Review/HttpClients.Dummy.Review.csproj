@@ -4,7 +4,7 @@
     <Nullable>disable</Nullable>
     <ImplicitUsings>true</ImplicitUsings>
     <PackageId>GoSolve.HttpClients.Dummy.Review</PackageId>
-    <Version>0.0.3</Version>
+    <Version>0.0.4</Version>
     <Company>goSolve</Company>
     <Authors>goSolve IT</Authors>
     <PackageTags>client;httpclient;dummy</PackageTags>
@@ -18,6 +18,7 @@
         v0.0.1: Added basic dummy ReviewHttpClient
         v0.0.2: Fix GoSolve.HttpClients.Shared project reference
         v0.0.3: Add review update functionality and contract
+        v0.0.4: Update HttpClients.Shared
     </PackageReleaseNotes>
   </PropertyGroup>
   <ItemGroup>
@@ -27,6 +28,9 @@
     <Folder Include="Contracts\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HttpClients.Shared\HttpClients.Shared.csproj" />
+    <ProjectReference Include="..\HttpClients.Shared\HttpClients.Shared.csproj">
+      <IncludeAssets>All</IncludeAssets>
+      <PrivateAssets>None</PrivateAssets>
+    </ProjectReference>
   </ItemGroup>
 </Project>
