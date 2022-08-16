@@ -37,3 +37,7 @@ jobs:
         run: dotnet nuget push ./out/*.nupkg --skip-duplicate -n -k ${NUGET_AUTH_TOKEN} -s https://nuget.pkg.github.com/gosolve-org/index.json
         env:
           NUGET_AUTH_TOKEN: ${{secrets.PACKAGE_PUBLISH_TOKEN}}
+      - name: Publish packages to NuGet
+        run: dotnet nuget push ./out/*.nupkg --skip-duplicate -n -k ${NUGET_AUTH_TOKEN} -s https://api.nuget.org/v3/index.json
+        env:
+          NUGET_AUTH_TOKEN: ${{secrets.NUGET_PUBLISH_TOKEN}}

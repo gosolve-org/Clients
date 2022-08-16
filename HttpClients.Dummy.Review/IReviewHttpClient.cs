@@ -33,7 +33,7 @@ public interface IReviewHttpClient
     /// </summary>
     /// <param name="review"></param>
     /// <returns></returns>
-    Task<ReviewResponse> Add(ReviewAddRequest review);
+    Task<ReviewResponse> Add(ReviewPostRequest review);
 
     /// <summary>
     /// Update a review.
@@ -41,5 +41,5 @@ public interface IReviewHttpClient
     /// <param name="id"></param>
     /// <param name="review"></param>
     /// <returns></returns>
-    Task<ReviewResponse> Update(long id, ReviewUpdateRequest review);
+    Task<ReviewResponse> Update(long id, ReviewPutRequest review);
 }

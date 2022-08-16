@@ -18,7 +18,7 @@ public class ReviewHttpClient : IReviewHttpClient
         _httpClient = httpClient;
     }
 
-    public async Task<ReviewResponse> Add(ReviewAddRequest review)
+    public async Task<ReviewResponse> Add(ReviewPostRequest review)
     {
         var response = await _httpClient.PostAsync($"{VersionUri}/{ReviewUri}", review.AsJson());
         await response.ValidateSuccess();
@@ -26,7 +26,7 @@ public class ReviewHttpClient : IReviewHttpClient
         return await response.AsContract<ReviewResponse>();
     }
 
-    public async Task<ReviewResponse> Update(long id, ReviewUpdateRequest review)
+    public async Task<ReviewResponse> Update(long id, ReviewPutRequest review)
     {
         var response = await _httpClient.PutAsync($"{VersionUri}/{ReviewUri}/{id}", review.AsJson());
         await response.ValidateSuccess();
