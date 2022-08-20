@@ -4,7 +4,7 @@
     <Nullable>disable</Nullable>
     <ImplicitUsings>true</ImplicitUsings>
     <PackageId>GoSolve.HttpClients.Shared</PackageId>
-    <Version>0.0.2</Version>
+    <Version>0.0.3</Version>
     <Company>goSolve</Company>
     <Authors>goSolve IT</Authors>
     <PackageTags>client;httpclient;dummy</PackageTags>
@@ -17,6 +17,7 @@
     <PackageReleaseNotes>
         v0.0.1: Added generic http extension methods
         v0.0.2: Add TimestampedResponse abstract class
+        v0.0.3: Update GoSolve.Tools.Common to version 0.0.4
     </PackageReleaseNotes>
   </PropertyGroup>
   <ItemGroup>
@@ -29,7 +30,7 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="GoSolve.Tools.Common" Version="0.0.2">
+    <PackageReference Include="GoSolve.Tools.Common" Version="0.0.4">
       <IncludeAssets>All</IncludeAssets>
       <PrivateAssets>None</PrivateAssets>
     </PackageReference>
