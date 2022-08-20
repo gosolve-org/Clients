@@ -4,7 +4,7 @@
     <Nullable>disable</Nullable>
     <ImplicitUsings>true</ImplicitUsings>
     <PackageId>GoSolve.HttpClients.Dummy.Review</PackageId>
-    <Version>0.0.5</Version>
+    <Version>0.0.6</Version>
     <Company>goSolve</Company>
     <Authors>goSolve IT</Authors>
     <PackageTags>client;httpclient;dummy</PackageTags>
@@ -20,6 +20,7 @@
         v0.0.3: Add review update functionality and contract
         v0.0.4: Update HttpClients.Shared
         v0.0.5: Add Patch contract to Review HttpClient and also publish packages to NuGet.org
+        v0.0.6: Update HttpClients.Shared to version 0.0.3
     </PackageReleaseNotes>
   </PropertyGroup>
   <ItemGroup>
