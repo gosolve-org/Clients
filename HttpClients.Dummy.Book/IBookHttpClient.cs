@@ -18,12 +18,12 @@ public interface IBookHttpClient
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    Task<DetailedBookResponse> GetBookById(int id);
+    Task<DetailedBookResponse> GetBookById(long id);
 
     /// <summary>
     /// Add a new book.
     /// </summary>
     /// <param name="book"></param>
     /// <returns></returns>
-    Task<BookResponse> AddBook(BookRequest book);
+    Task<BookResponse> AddBook(BookPostRequest book);
 }

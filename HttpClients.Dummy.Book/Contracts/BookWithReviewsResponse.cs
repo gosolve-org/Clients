@@ -8,7 +8,7 @@ public class DetailedBookResponse
     /// <summary>
     /// Id of the book.
     /// </summary>
-    public int Id { get; set; }
+    public long Id { get; set; }
 
     /// <summary>
     /// Title of the book.
@@ -19,6 +19,11 @@ public class DetailedBookResponse
     /// Amout of pages of the book.
     /// </summary>
     public int AmountOfPages { get; set; }
+
+    /// <summary>
+    /// The genre of the book.
+    /// </summary>
+    public BookGenreReponse Genre { get; set; }
 
     /// <summary>
     /// The reviews of the book.
@@ -34,12 +39,7 @@ public class DetailedBookReviewResponse
     /// <summary>
     /// Id of the review.
     /// </summary>
-    public int Id { get; set; }
-
-    /// <summary>
-    /// Id of the book the review is for.
-    /// </summary>
-    public int BookId { get; set; }
+    public long Id { get; set; }
 
     /// <summary>
     /// Author of the review.

@@ -4,7 +4,7 @@
     <Nullable>disable</Nullable>
     <ImplicitUsings>true</ImplicitUsings>
     <PackageId>GoSolve.HttpClients.Dummy.Book</PackageId>
-    <Version>0.0.3</Version>
+    <Version>0.0.4</Version>
     <Company>goSolve</Company>
     <Authors>goSolve IT</Authors>
     <PackageTags>client;httpclient;dummy</PackageTags>
@@ -18,6 +18,7 @@
         v0.0.1: Added basic dummy BookHttpClient
         v0.0.2: Fix GoSolve.HttpClients.Shared project reference
         v0.0.3: Update HttpClients.Shared to version 0.0.3
+        v0.0.4: Add BookGenre contracts
     </PackageReleaseNotes>
   </PropertyGroup>
   <ItemGroup>
