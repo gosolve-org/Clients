@@ -8,7 +8,7 @@ public class BookResponse
     /// <summary>
     /// Id of the book.
     /// </summary>
-    public int Id { get; set; }
+    public long Id { get; set; }
 
     /// <summary>
     /// Title of the book.
@@ -19,4 +19,9 @@ public class BookResponse
     /// Amout of pages of the book.
     /// </summary>
     public int AmountOfPages { get; set; }
+
+    /// <summary>
+    /// Genre of the book.
+    /// </summary>
+    public BookGenreReponse Genre { get; set; }
 }

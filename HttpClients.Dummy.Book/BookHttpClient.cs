@@ -17,7 +17,7 @@ public class BookHttpClient : IBookHttpClient
         _httpClient = httpClient;
     }
 
-    public async Task<BookResponse> AddBook(BookRequest book)
+    public async Task<BookResponse> AddBook(BookPostRequest book)
     {
         var response = await _httpClient.PostAsync(BookUri, book.AsJson());
         await response.ValidateSuccess();
@@ -25,7 +25,7 @@ public class BookHttpClient : IBookHttpClient
         return await response.AsContract<BookResponse>();
     }
 
-    public async Task<DetailedBookResponse> GetBookById(int id)
+    public async Task<DetailedBookResponse> GetBookById(long id)
     {
         var response = await _httpClient.GetAsync($"{BookUri}/{id}");
         await response.ValidateSuccess();
