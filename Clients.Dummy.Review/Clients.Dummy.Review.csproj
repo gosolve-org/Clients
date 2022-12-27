@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <PackageId>GoSolve.Clients.Dummy.Review</PackageId>
+    <Version>0.0.7</Version>
+    <Company>goSolve</Company>
+    <Authors>goSolve IT</Authors>
+    <PackageTags>client;httpclient;dummy</PackageTags>
+    <Description>Package containing clients for the Dummy-Review-Service.</Description>
+    <Copyright>Copyright © goSolve 2022</Copyright>
+    <RepositoryUrl>https://github.com/gosolve-org/Clients</RepositoryUrl>
+    <PackageLicenseExpression>AGPL-3.0-only</PackageLicenseExpression>
+    <RootNamespace>GoSolve.Clients.Dummy.Review</RootNamespace>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageReleaseNotes>
+        v0.0.1: Added basic dummy ReviewHttpClient
+        v0.0.2: Fix GoSolve.HttpClients.Shared project reference
+        v0.0.3: Add review update functionality and contract
+        v0.0.4: Update HttpClients.Shared
+        v0.0.5: Add Patch contract to Review HttpClient and also publish packages to NuGet.org
+        v0.0.6: Update HttpClients.Shared to version 0.0.3
+        v0.0.7: Rename package to GoSolve.Clients.Dummy.Review
+    </PackageReleaseNotes>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Contracts\" />
+    <None Remove="HttpClients\" />
+    <None Remove="HttpClients\Interfaces\" />
+    <None Remove="Contracts\Requests\" />
+    <None Remove="Contracts\Responses\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Contracts\" />
+    <Folder Include="HttpClients\" />
+    <Folder Include="HttpClients\Interfaces\" />
+    <Folder Include="Contracts\Requests\" />
+    <Folder Include="Contracts\Responses\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Clients.Shared\Clients.Shared.csproj">
+      <IncludeAssets>All</IncludeAssets>
+      <PrivateAssets>None</PrivateAssets>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

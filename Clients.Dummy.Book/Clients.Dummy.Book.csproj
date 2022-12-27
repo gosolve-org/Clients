@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <PackageId>GoSolve.Clients.Dummy.Book</PackageId>
+    <Version>0.0.5</Version>
+    <Company>goSolve</Company>
+    <Authors>goSolve IT</Authors>
+    <PackageTags>client;dummy</PackageTags>
+    <Description>Package containing clients for the Dummy-Book-Service.</Description>
+    <Copyright>Copyright © goSolve 2022</Copyright>
+    <RepositoryUrl>https://github.com/gosolve-org/Clients</RepositoryUrl>
+    <PackageLicenseExpression>AGPL-3.0-only</PackageLicenseExpression>
+    <RootNamespace>GoSolve.Clients.Dummy.Book</RootNamespace>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageReleaseNotes>
+        v0.0.1: Added basic dummy BookHttpClient
+        v0.0.2: Fix GoSolve.HttpClients.Shared project reference
+        v0.0.3: Update HttpClients.Shared to version 0.0.3
+        v0.0.4: Add BookGenre contracts
+        v0.0.5: Rename package to GoSolve.Clients.Dummy.Book
+    </PackageReleaseNotes>
+    <AssemblyName>Clients.Dummy.Book</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Contracts\" />
+    <None Remove="HttpClients\" />
+    <None Remove="HttpClients\Interfaces\" />
+    <None Remove="Contracts\Requests\" />
+    <None Remove="Contracts\Responses\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Contracts\" />
+    <Folder Include="HttpClients\" />
+    <Folder Include="HttpClients\Interfaces\" />
+    <Folder Include="Contracts\Requests\" />
+    <Folder Include="Contracts\Responses\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Clients.Shared\Clients.Shared.csproj">
+      <IncludeAssets>All</IncludeAssets>
+      <PrivateAssets>None</PrivateAssets>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
