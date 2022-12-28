@@ -1,9 +1,11 @@
-﻿namespace GoSolve.Clients.Dummy.Book.Contracts.Responses;
+﻿using GoSolve.Clients.Shared.Models;
+
+namespace GoSolve.Clients.Dummy.Book.Contracts.Responses;
 
 /// <summary>
 /// Response DTO for Book.
 /// </summary>
-public class BookResponse
+public class BookResponse : TimestampedResponse
 {
     /// <summary>
     /// Id of the book.

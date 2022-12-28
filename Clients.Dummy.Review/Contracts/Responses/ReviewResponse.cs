@@ -31,4 +31,25 @@ public class ReviewResponse : TimestampedResponse
     /// Comment on the book.
     /// </summary>
     public string Comment { get; set; }
+
+    /// <summary>
+    /// The type of the author of the review.
+    /// </summary>
+    public ReviewAuthorTypeResponse AuthorType { get; set; }
+}
+
+/// <summary>
+/// Response DTO for review author type.
+/// </summary>
+public class ReviewAuthorTypeResponse
+{
+    /// <summary>
+    /// The id of the type.
+    /// </summary>
+    public int Id { get; set; }
+
+    /// <summary>
+    /// The name of the type.
+    /// </summary>
+    public string Type { get; set; }
 }
