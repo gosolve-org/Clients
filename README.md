@@ -7,7 +7,7 @@ To register a HttpClient in your Program.cs for dependency injection, use the fo
 builder.Services.AddInternalHttpClient<IBookHttpClient, BookHttpClient>(builder.Configuration, "book");
 ```
 And add the following to your appsettings.json and appsettings.Development.json:
-```json
+```javascript
 {
     "HttpClients": [
         {
