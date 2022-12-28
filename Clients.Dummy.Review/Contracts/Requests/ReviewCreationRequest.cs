@@ -29,4 +29,9 @@ public class ReviewCreationRequest
     /// Comment on the book.
     /// </summary>
     public string Comment { get; set; }
+
+    /// <summary>
+    /// Id of the review author type.
+    /// </summary>
+    public int ReviewAuthorTypeId { get; set; }
 }
