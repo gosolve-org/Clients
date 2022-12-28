@@ -33,5 +33,5 @@ public class ReviewCreationRequest
     /// <summary>
     /// Id of the review author type.
     /// </summary>
-    public int ReviewAuthorTypeId { get; set; }
+    public int AuthorTypeId { get; set; }
 }

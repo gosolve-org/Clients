@@ -4,7 +4,7 @@
     <Nullable>disable</Nullable>
     <ImplicitUsings>true</ImplicitUsings>
     <PackageId>GoSolve.Clients.Dummy.Review</PackageId>
-    <Version>0.0.8</Version>
+    <Version>0.0.9</Version>
     <Company>goSolve</Company>
     <Authors>goSolve IT</Authors>
     <PackageTags>client;httpclient;dummy</PackageTags>
@@ -23,6 +23,7 @@
         v0.0.6: Update HttpClients.Shared to version 0.0.3
         v0.0.7: Rename package to GoSolve.Clients.Dummy.Review
         v0.0.8: Add ReviewAuthorType response
+        v0.0.9: Rename property AuthorTypeId
     </PackageReleaseNotes>
   </PropertyGroup>
   <ItemGroup>
